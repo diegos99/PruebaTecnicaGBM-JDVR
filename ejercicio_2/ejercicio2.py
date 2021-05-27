@@ -1,6 +1,6 @@
 import random
 
-G = 3 # Total gran premios
+G = 20 # Total gran premios
 pilotos_id = [32,24,35,54,76,23,87,95,15,18,14,65,78,66,90] # Identificador unico de cada piloto
 P = len(pilotos_id) # Total pilotos
 SP1 = [[1,2,3,4,5,6,7,8], [10,8,6,5,4,3,2,1]] # Sistema de puntaje 1
@@ -70,11 +70,14 @@ def ResultadosSP12(sistema_p):
     if sistema_p == 1:
         print("CAMPEON(ES) DEL MUNDO - SISTEMA PUNTUACIÓN", sistema_p)
         DeteccionGanador(sistema_p)
+        return True
     elif sistema_p == 2:
         print("CAMPEON(ES) DEL MUNDO - SISTEMA PUNTUACIÓN", sistema_p)
         DeteccionGanador(sistema_p)
+        return True
     else:
         print("SISTEMA DE PUNTUACION NO VALIDO")
+        return False
 
 def DeteccionGanador(sistema_p):
     resultados_finales = []
@@ -87,6 +90,7 @@ def DeteccionGanador(sistema_p):
         if puntos_por_carrera[0][item][sistema_p] == valor_max:
             ganadores.append(puntos_por_carrera[0][item][0])
     print(ganadores)
+    return resultados_finales
 
 ResultadosSP12(1) # Sistema puntuación 1
 ResultadosSP12(2) # Sistema puntuación 2
