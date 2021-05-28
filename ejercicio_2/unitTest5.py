@@ -4,7 +4,7 @@
 import unittest
 import ejercicio2
 
-class UnitTest4(unittest.TestCase):
+class UnitTest5(unittest.TestCase):
     def test_longitud_registro_puntos(self):
         self.assertIn(max(ejercicio2.DeteccionGanador(1)), ejercicio2.DeteccionGanador(1))
 

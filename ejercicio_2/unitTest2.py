@@ -9,7 +9,7 @@
 import unittest
 import ejercicio2
 
-class UnitTest1(unittest.TestCase):
+class UnitTest2(unittest.TestCase):
     def test_puntaje2(self):
         self.assertEqual(ejercicio2.AsignarPunteoSP2(1), 25)
 
